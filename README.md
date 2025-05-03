@@ -11,3 +11,15 @@ We explore pre-trained Sentence-Transformer models (SBERT) for semantic retrieva
 ## Instructions for setting up
 
 ## All dependencies and external libraries used
+
+- Python 3.8  
+- torch==1.11.0  
+- transformers==4.21.0  
+- sentence-transformers==2.2.0  
+- faiss-cpu==1.7.1  
+- numpy>=1.21.0  
+- pandas>=1.3.0  
+- scikit-learn>=0.24.0  
+- tqdm>=4.64.0  
+- requests>=2.26.0  
+- biopython>=1.79  
