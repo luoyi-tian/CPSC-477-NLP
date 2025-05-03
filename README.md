@@ -31,12 +31,19 @@ Here’s what’s in this repo:
 
 ### Running in Colab
 
-1. Go to Google Colab:  
-(Replace `RELISH.ipynb` with any other notebook name.)
+No local setup is required—everything runs in Google Colab. The one extra step is to mount your Google Drive so that the `RELISH_v1.json` file can be accessed.
 
-2. Click **“Open in Playground”**, ensure `RELISH_v1.json` is listed in the file browser.
+1. **Save `RELISH_v1.json` into your Google Drive.**  
+   For example, put it in `MyDrive/CPSC-477-NLP/RELISH_v1.json`.
 
-3. Run all cells.  
+2. **Open the notebook from GitHub** (replace `RELISH.ipynb` with the one you want):
+
+
+
+3. **Mount Google Drive** at the top of the Colab notebook:
+```python
+from google.colab import drive
+drive.mount('/content/drive')
 
 That’s it—no further installation or setup needed!  
 
