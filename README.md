@@ -36,15 +36,14 @@ No local setup is required—everything runs in Google Colab. The one extra step
 1. **Save `RELISH_v1.json` into your Google Drive.**  
    For example, put it in `MyDrive/CPSC-477-NLP/RELISH_v1.json`.
 
-2. **Open the notebook from GitHub** (replace `RELISH.ipynb` with the one you want):
+2. **Open the notebook from GitHub** (replace `RELISH.ipynb` with the one you want)
 
-
-
-3. **Mount Google Drive** at the top of the Colab notebook:
+3. **Mount Google Drive** run the code at the top of the Colab notebook:
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
+4. **Copy the JSON file path into the Colab session**
 
 That’s it—no further installation or setup needed!  
 
