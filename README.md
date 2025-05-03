@@ -44,6 +44,7 @@ No local setup is required—everything runs in Google Colab. The one extra step
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
+```
 
 That’s it—no further installation or setup needed!  
 
