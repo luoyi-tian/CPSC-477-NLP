@@ -8,7 +8,38 @@ This repository contains the code and data for:
 
 We explore pre-trained Sentence-Transformer models (SBERT) for semantic retrieval on the RELISH dataset, comparing out-of-the-box embeddings, full fine-tuning, and LoRA adapter tuning. Our implementation demonstrates that LoRA achieves strong gains with minimal trainable parameters.
 
-## Instructions for setting up
+## Instructions for running
+
+No complex setup is required—everything can be run directly in Google Colab. Simply open the notebook you want and execute all cells. Make sure the `RELISH_v1.json` file is in the same folder as the notebook.
+
+Here’s what’s in this repo:
+
+- **RELISH_v1.json**  
+  Raw RELISH v1 dataset (≈180 k articles).  
+
+- **RELISH.ipynb**  
+  Data preprocessing: parses `RELISH_v1.json`, fetches metadata via NCBI E-Utilities, cleans text, and splits into train/val/test.  
+
+- **SBERT+FAISS_baseline_final code.ipynb**  
+  Baseline retrieval pipeline: generates SBERT embeddings, builds a FAISS `IndexFlatIP` index over ℓ₂-normalized vectors, and evaluates MAP/MRR/NDCG.  
+
+- **SBERT Finetune.ipynb**  
+  Standard full fine-tuning of SBERT (`all-mpnet-base-v2`) using triplet loss, with batch size 16, LR=1e-5, 3 epochs, and 10 % warmup.  
+
+- **LoRA_Finetuning.ipynb**  
+  LoRA adapter tuning on SBERT: injects rank-8 adapters in each layer’s query/value, trains only ~0.5 M parameters (α=32, dropout=0.1) under the same hyperparams.
+
+### Running in Colab
+
+1. Go to Google Colab:  
+(Replace `RELISH.ipynb` with any other notebook name.)
+
+2. Click **“Open in Playground”**, ensure `RELISH_v1.json` is listed in the file browser.
+
+3. Run all cells.  
+
+That’s it—no further installation or setup needed!  
+
 
 ## All dependencies and external libraries used
 
