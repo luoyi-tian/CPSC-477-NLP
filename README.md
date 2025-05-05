@@ -64,3 +64,4 @@ That’s it—no further installation or setup needed!
 
 ## The code can also be found through these link:
 SBERT+FAISS_baseline_final code: https://colab.research.google.com/drive/1Brtigj3f3abG8cPh3pMNe9IEdsM17ouq
+LoRA Finetuning: https://colab.research.google.com/drive/1m6aIq5b-TPVGz4hUDIi6TS0MazLNQUKO?usp=drive_link
